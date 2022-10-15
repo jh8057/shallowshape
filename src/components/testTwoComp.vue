@@ -10,7 +10,7 @@
             class="imgList__item"
           >
             <img
-              :src="`/colorProject/total/${i}.png`"
+              :src="`/shallowshape/total/${i}.png`"
               class="imgList__item--img"
             />
             <div class="selectSection__item">
