@@ -6,12 +6,12 @@
         <img :src="`/shallowshape/answer/${num}.png`" class="Question__img" />
         <section class="selectSection">
           <div class="selectSection__item">
-            <label for="select1">{{ one }}</label>
-            <input type="radio" id="select1" :value="one" v-model="selected" />
+            <label for="select1">있음</label>
+            <input type="radio" id="select1" value="있음" v-model="selected" />
           </div>
           <div class="selectSection__item">
-            <label for="select2">{{ two }}</label>
-            <input type="radio" id="select2" :value="two" v-model="selected" />
+            <label for="select2">없음</label>
+            <input type="radio" id="select2" value="없음" v-model="selected" />
           </div>
         </section>
       </div>
@@ -66,8 +66,6 @@ export default defineComponent({
     const store = useStore();
 
     const selectedAnswer = computed(() => store.state.selectedAnswer);
-    const one = computed(() => store.state.selectedAnswer.one);
-    const two = computed(() => store.state.selectedAnswer.two);
     const num = computed(() => store.state.selectedAnswer.num || 1);
     const answer = computed(() => store.state.selectedAnswer.answer);
     const len = computed(() => store.getters.getAnswerListLength);
@@ -115,8 +113,6 @@ export default defineComponent({
       question,
       answerList,
       selectedAnswer,
-      one,
-      two,
       num,
       answer,
       doSelect,
