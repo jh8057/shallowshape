@@ -2,7 +2,7 @@
   <div class="testOneComp">
     <main v-show="question" class="Question">
       <div class="Question__center">
-        <h3>색상은 {{ one }}인가요 {{ two }}인가요?</h3>
+        <h3>곡선이 있나요 없나요?</h3>
         <img :src="`/shallowshape/answer/${num}.png`" class="Question__img" />
         <section class="selectSection">
           <div class="selectSection__item">
