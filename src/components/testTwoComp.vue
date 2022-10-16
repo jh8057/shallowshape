@@ -40,12 +40,14 @@
         <div>
           <img
             :src="`/shallowshape/colorTest/${colorNum}.jpg`"
-            class="imgList__item--img"
+            class="colorTestImg"
           />
-          <input v-model="colorInput" />&nbsp;
-          <button @click="goNextStep" style="font-size: 15px; padding: 10px">
-            다음
-          </button>
+          <div>
+            <input v-model="colorInput" />&nbsp;
+            <button @click="goNextStep" style="font-size: 15px; padding: 10px">
+              다음
+            </button>
+          </div>
         </div>
       </div>
     </article>
@@ -208,8 +210,8 @@ export default defineComponent({
   height: 15vw;
 }
 .imgList__item--img {
-  width: 40vh;
-  height: 40vh;
+  width: 100%;
+  height: 100%;
 }
 
 .Question__color {
@@ -221,5 +223,9 @@ export default defineComponent({
 
 .tm25 {
   margin-top: 25px;
+}
+.colorTestImg {
+  width: 40vh;
+  height: 40vh;
 }
 </style>

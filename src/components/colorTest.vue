@@ -9,12 +9,14 @@
         <div>
           <img
             :src="`/shallowshape/colorTest/${colorNum}.jpg`"
-            class="imgList__item--img"
+            class="colorTestImg"
           />
-          <input v-model="colorInput" />&nbsp;
-          <button @click="showEnd" style="font-size: 15px; padding: 10px">
-            다음
-          </button>
+          <div>
+            <input v-model="colorInput" />&nbsp;
+            <button @click="showEnd" style="font-size: 15px; padding: 10px">
+              다음
+            </button>
+          </div>
         </div>
       </div>
     </article>
