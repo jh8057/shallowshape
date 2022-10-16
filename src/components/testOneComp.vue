@@ -98,7 +98,11 @@ export default defineComponent({
       showFin.value = showFin.value ? false : true;
     };
     const goTestTwo = () => {
-      if(window.confirm('지시에 따라 다음단계로 넘어가주세요.\n 다음 단계로 넘어갈까요?')){
+      if (
+        window.confirm(
+          "지시에 따라 다음단계로 넘어가주세요.\n 다음 단계로 넘어갈까요?"
+        )
+      ) {
         store.commit("setStep", 5);
       }
     };
@@ -106,7 +110,6 @@ export default defineComponent({
     onMounted(() => {
       // 재시작 방지
       if (finData.value.length > 0) finalResult.push(...finData.value);
-      console.log("final", finalResult);
     });
 
     return {
@@ -159,13 +162,12 @@ export default defineComponent({
       };
       this.finalResult.push(result);
       this.selected = "";
-      console.log(result);
+      // console.log(result);
       this.saveFinal();
 
       if (this.len > 0) {
         this.showCenterPoint();
       } else {
-        console.log("end");
         this.question = false;
         this.setTestOneEnd(true);
       }
@@ -187,7 +189,7 @@ export default defineComponent({
   width: 100%;
   height: 100%;
 }
-.Question{
+.Question {
   margin-top: 20px;
   width: 100%;
   height: 100%;
@@ -222,7 +224,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px;
 }
 
 .centerPoint__img {
@@ -242,6 +244,6 @@ export default defineComponent({
   flex-direction: column;
 }
 .redfont {
-  color : red;
+  color: red;
 }
 </style>
