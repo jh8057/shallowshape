@@ -23,12 +23,10 @@
     </main>
 
     <article v-show="end" class="QuestionEnd">
-      <div>
-        창을 종료하지 말고 지시가 있기 전까지<br />
-        <span class="redfont">대기하여 주시기 바랍니다.</span><br />
-      </div>
-      <div style="margin: 30px">
-        <button @click="goTestTwo" style="font-size: 15px; padding: 10px">
+      1차 테스트 종료되었습니다.<br />
+      2차 테스트를 진행해주세요.
+      <div style="margin: 10px">
+        <button @click="goTestTwo" style="font-size: 15px; padding: 25px">
           다음</button
         ><br />
       </div>
@@ -97,14 +95,9 @@ export default defineComponent({
     const showResult = () => {
       showFin.value = showFin.value ? false : true;
     };
+
     const goTestTwo = () => {
-      if (
-        window.confirm(
-          "지시에 따라 다음단계로 넘어가주세요.\n 다음 단계로 넘어갈까요?"
-        )
-      ) {
-        store.commit("setStep", 5);
-      }
+      store.commit("setStep", 5);
     };
 
     onMounted(() => {
